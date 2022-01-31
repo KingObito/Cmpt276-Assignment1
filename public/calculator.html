@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>GPA Calculator</title>
+
+  <script src="calculator.js"></script>
+  <link rel="stylesheet" href="stylesheets/calculator.css">
+</head>
+
+<body>
+
+
+  <div class="first-container">
+    <div class="second-container">
+      <h1>Grade Calculator</h1>
+      <div class="third-container">
+        <h3>Activities</h3>
+        <p>Give grades to the numeric activities</p>
+        <table id="tableID" cellspacing="0">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Short Name</th>
+              <th>Weight</th>
+              <th>Grade</th>
+              <th>Percent</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr id="1">
+              <td>Activity 1</td>
+              <td>A1</td>
+              <td><input id="weight1" class="weight" type="number" name="weight" value="" min="0"></td>
+              <td>
+                <input id="a1g1" class="grade" type="number" name="grade" value="" min="0" onkeyup="percent()">
+                <span class="font-size">/ </span>
+                <input id="a1g2" class="grade2" type="number" name="grade2" value="" min="0" onkeyup="percent()">
+              </td>
+              <td>
+                <p id="percent1"> </p>
+              </td>
+            </tr>
+
+            <tr id="2">
+              <td>Activity 2</td>
+              <td>A2</td>
+              <td><input id="weight2" class="weight" type="number" name="weight" value="" min="0"></td>
+              <td>
+                <input id="a2g1" class="grade" type="number" name="grade" value="" min="0" onkeyup="percent()">
+                <span class="font-size">/ </span>
+                <input id="a2g2" class="grade2" type="number" name="grade2" value="" min="0" onkeyup="percent()">
+              </td>
+              <td>
+                <p id="percent2"> </p>
+              </td>
+            </tr>
+            <tr id="3">
+              <td>Activity 3</td>
+              <td>A3</td>
+              <td><input id="weight3" class="weight" type="number" name="weight" value="" min="0"></td>
+              <td>
+                <input id="a3g1" class="grade" type="number" name="grade" value="" min="0" onkeyup="percent()">
+                <span class="font-size">/ </span>
+                <input id="a3g2" class="grade2" type="number" name="grade2" value="" min="0" onkeyup="percent()">
+              </td>
+              <td>
+                <p id="percent3"> </p>
+              </td>
+            </tr>
+            <tr id="4">
+              <td>Activity 4</td>
+              <td>A4</td>
+              <td><input id="weight4" class="weight" type="number" name="weight" min="0" value=""></td>
+              <td>
+                <input id="a4g1" class="grade" type="number" name="grade" min="0" value="" onkeyup="percent()">
+                <span class="font-size">/ </span>
+                <input id="a4g2" class="grade2" type="number" name="" min="0" value="" onkeyup="percent()">
+              </td>
+              <td>
+                <p id="percent4"> </p>
+              </td>
+            </tr>
+          </tbody>
+
+        </table>
+        <button class="add-button" type="button" onclick="addRow('tableID')">ADD ACTIVITY</button>
+        <h2 class="result-button"><strong>Result</strong></h2>
+        <h4 id="results"></h4>
+        <button class="weighted-button" type="button" onclick="AddWeighted()">WEIGHTED</button>
+        <button class="mean-button" type="button" onclick="AddMean()">MEAN</button>
+
+      </div>
+    </div>
+  </div>
+
+
+
+</body>
+
+</html>
